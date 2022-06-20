@@ -31,14 +31,14 @@ class register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Route'),
+        title: const Text('REGISTER'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text('REGISTER'),
+          child: const Text('BALIK'),
         ),
       ),
     );

@@ -24,14 +24,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class login extends StatelessWidget {
-  const login({super.key});
+class wishlist extends StatelessWidget {
+  const wishlist({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LOGIN'),
+        title: const Text('wishlist'),
       ),
       body: Center(
         child: ElevatedButton(

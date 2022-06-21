@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+import 'register.dart';
+import 'shopping.dart';
+import 'cart.dart';
+import 'product.dart';
+import 'menuBar.dart';
+import 'menuLogin.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
-        ),
-        body: const Center(
-          child: Text('Hello asdasdsadWorld'),
-        ),
-      ),
-    );
-  }
+  runApp(const wishlist());
 }
 
 class wishlist extends StatelessWidget {
@@ -30,17 +18,205 @@ class wishlist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('wishlist'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('BALIK'),
+        appBar: AppBar(
+          title: const Text('Wishlist'),
         ),
-      ),
+        body: SingleChildScrollView(
+            child: Container(
+          margin: EdgeInsets.only(left: 12, top: 24, right: 12),
+          child: Column(
+            children: [
+              //Top Product
+              Container(
+                  child: Row(
+                children: [
+                  const Text(
+                    'Wishlist',
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  Spacer(),
+                ],
+              )),
+
+              Container(
+                margin: const EdgeInsets.only(top: 12),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+            ),
+        ),
     );
   }
 }

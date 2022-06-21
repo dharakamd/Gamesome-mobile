@@ -1,27 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'main.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
-        ),
-        body: const Center(
-          child: Text('Hello asdasdsadWorld'),
-        ),
-      ),
-    );
-  }
+  runApp(const menuBar());
 }
 
 class menuBar extends StatelessWidget {
@@ -30,17 +11,51 @@ class menuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('menuBar'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('BALIK'),
+        appBar: AppBar(
+          title: const Text('menuBar'),
         ),
-      ),
-    );
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.all(12),
+              height: 300,
+              color: Colors.blue,
+            ),
+            Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                width: 50,
+                height: 50,
+                color: Colors.blue,
+              ),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Dzaki Mahadika Gunarto',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Container(
+                  margin: EdgeInsets.only(top: 24, left: 4, right: 4),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          minimumSize: Size.fromHeight(40)),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const home()));
+                      },
+                      child: const Text('Log Out'))),
+                ],
+              ),
+            );
   }
 }

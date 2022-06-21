@@ -7,6 +7,7 @@ import 'wishlist.dart';
 import 'cart.dart';
 import 'product.dart';
 import 'menuBar.dart';
+import 'menuLogin.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -41,9 +42,50 @@ class home extends StatelessWidget {
                   TextButton(onPressed: () {}, child: Text('Show more'))
                 ],
               )),
-              Container(
+
+              // Top Product Card
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const product()));
+                      },
+                      child: Card(
+                        child: Container(
+                          width: 160,
+                          height: 240,
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 120,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -85,6 +127,7 @@ class home extends StatelessWidget {
                   ],
                 ),
               ),
+
               // Categories
               Container(
                 margin: EdgeInsets.only(top: 24),
@@ -99,6 +142,7 @@ class home extends StatelessWidget {
                   ],
                 ),
               ),
+
               // Categories Items
               Container(
                 child: Column(
@@ -321,11 +365,16 @@ class home extends StatelessWidget {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size.fromHeight(40)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const shopping()));
+                      },
                       child: const Text('All Items'))),
               Container(
-                height: 500,
-                width: 500,
+                height: 300,
+                width: 300,
               ),
               Center(
                 child: ElevatedButton(
@@ -337,6 +386,15 @@ class home extends StatelessWidget {
                     );
                   },
                 ),
+              ),
+              ElevatedButton(
+                child: const Text('MENU LOGIN'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const menuLogin()),
+                  );
+                },
               ),
               ElevatedButton(
                 child: const Text('REGISTER'),

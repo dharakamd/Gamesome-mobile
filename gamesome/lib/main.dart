@@ -39,7 +39,19 @@ class home extends StatelessWidget {
                     style: TextStyle(fontSize: 24),
                   ),
                   Spacer(),
-                  TextButton(onPressed: () {}, child: Text('Show more'))
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const shopping()));
+                        // Navigator.pushAndRemoveUntil(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: ((context) => const shopping())),
+                        //     (Route<dynamic> route) => false);
+                      },
+                      child: const Text('Show more'))
                 ],
               )),
 
@@ -130,21 +142,22 @@ class home extends StatelessWidget {
 
               // Categories
               Container(
-                margin: EdgeInsets.only(top: 24),
+                margin: const EdgeInsets.only(top: 24),
                 child: Row(
                   children: [
-                    const Text(
-                      'Categories',
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    Spacer(),
-                    TextButton(onPressed: () {}, child: Text('Show more'))
+                    Container(
+                      child: const Text(
+                        'Categories',
+                        style: TextStyle(fontSize: 24),
+                      ),
+                    )
                   ],
                 ),
               ),
 
               // Categories Items
               Container(
+                margin: const EdgeInsets.only(top: 12),
                 child: Column(
                   children: [
                     Row(

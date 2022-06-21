@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gamesome/main.dart';
+import 'package:gamesome/register.dart';
 
 void main() {
   runApp(const login());
@@ -52,7 +54,13 @@ class login extends StatelessWidget {
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   minimumSize: const Size.fromHeight(40)),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: ((context) => const home())),
+                                    (Route<dynamic> route) => false);
+                              },
                               child: const Text('Login')),
                         ),
                         Container(
@@ -76,7 +84,13 @@ class login extends StatelessWidget {
                               children: [
                                 const Text("Don't have an account?"),
                                 TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: ((context) =>
+                                                  const register())));
+                                    },
                                     child: const Text('Register'))
                               ],
                             ))

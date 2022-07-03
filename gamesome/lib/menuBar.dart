@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:gamesome/main.dart';
+import 'home.dart';
 
 void main() {
   runApp(const menuBar());
@@ -11,17 +12,17 @@ class menuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('menuBar'),
-        ),
-        body: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.all(12),
-              height: 300,
-              color: Colors.blue,
-            ),
-            Row(
+      appBar: AppBar(
+        title: const Text('menuBar'),
+      ),
+      body: Column(
+        children: [
+          Container(
+            margin: EdgeInsets.all(12),
+            height: 300,
+            color: Colors.blue,
+          ),
+          Row(
             children: [
               Container(
                 margin: const EdgeInsets.all(10.0),
@@ -43,19 +44,19 @@ class menuBar extends StatelessWidget {
             ],
           ),
           Container(
-                  margin: EdgeInsets.only(top: 24, left: 4, right: 4),
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size.fromHeight(40)),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const home()));
-                      },
-                      child: const Text('Log Out'))),
-                ],
-              ),
-            );
+              margin: EdgeInsets.only(top: 24, left: 4, right: 4),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: Size.fromHeight(40)),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
+                  },
+                  child: const Text('Log Out'))),
+        ],
+      ),
+    );
   }
 }

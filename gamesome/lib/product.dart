@@ -42,7 +42,7 @@ class product extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/testpic.jpg'),
                   const Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(12, 10.0, 10.0, 0.0),
                     child: Text(
                       'Product name',
                       textAlign: TextAlign.left,
@@ -51,7 +51,7 @@ class product extends StatelessWidget {
                     ),
                   ),
                   const Padding(
-                      padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(12, 10.0, 12, 0.0),
                       child: Text(
                         'Rp50.000,00',
                         textAlign: TextAlign.left,
@@ -65,7 +65,7 @@ class product extends StatelessWidget {
                     endIndent: 0,
                   ),
                   const Padding(
-                      padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(12, 10.0, 12, 0.0),
                       child: Text(
                         'Description',
                         textAlign: TextAlign.left,
@@ -73,31 +73,40 @@ class product extends StatelessWidget {
                             fontSize: 18, fontWeight: FontWeight.bold),
                       )),
                   const Padding(
-                      padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(12, 10.0, 12, 0.0),
                       child: Text(
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec euismod neque, vel sagittis magna. Mauris luctus arcu eu sapien laoreet aliquet. Sed ullamcorper tempus nisi vitae suscipit. Suspendisse ut lorem ante. Morbi nec tortor sit amet velit semper tincidunt et vel sem. Etiam rutrum scelerisque sollicitudin.',
                         textAlign: TextAlign.left,
                         style: TextStyle(fontSize: 18),
                       )),
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    SizedBox(
-                      width: 330,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          //sumthin
-                        },
-                        icon: const Icon(Icons.shopping_cart, size: 18),
-                        label: const Text("Add to cart"),
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        //sumthin
-                      },
-                      icon: Icon(Icons.favorite,
-                          color: isWishlist ? Colors.red : Colors.blueGrey),
-                    )
-                  ])
+                  Container(
+                      margin: const EdgeInsets.only(
+                          top: 24, left: 12, right: 12, bottom: 4),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 316,
+                              child: ElevatedButton.icon(
+                                onPressed: () {
+                                  //sumthin
+                                },
+                                icon: const Icon(Icons.shopping_cart, size: 18),
+                                label: const Text("Add to cart"),
+                              ),
+                            ),
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {
+                                //sumthin
+                              },
+                              icon: Icon(Icons.favorite,
+                                  color: isWishlist
+                                      ? Colors.red
+                                      : Colors.blueGrey),
+                              iconSize: 36,
+                            ),
+                          ]))
                 ],
               )),
         ));

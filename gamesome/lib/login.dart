@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gamesome/home.dart';
 import 'package:gamesome/main.dart';
 import 'package:gamesome/register.dart';
 
@@ -58,7 +59,8 @@ class login extends StatelessWidget {
                                 Navigator.pushAndRemoveUntil(
                                     context,
                                     MaterialPageRoute(
-                                        builder: ((context) => const home())),
+                                        builder: ((context) =>
+                                            const HomePage())),
                                     (Route<dynamic> route) => false);
                               },
                               child: const Text('Login')),

@@ -62,10 +62,8 @@ class home extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const product()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => product()));
                       },
                       child: Card(
                         child: Container(
@@ -81,10 +79,8 @@ class home extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const product()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => product()));
                       },
                       child: Card(
                         child: Container(
@@ -100,10 +96,8 @@ class home extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const product()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => product()));
                       },
                       child: Card(
                         child: Container(
@@ -119,10 +113,8 @@ class home extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const product()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => product()));
                       },
                       child: Card(
                         child: Container(
@@ -450,7 +442,7 @@ class home extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const product()),
+                    MaterialPageRoute(builder: (context) => product()),
                   );
                 },
               ),

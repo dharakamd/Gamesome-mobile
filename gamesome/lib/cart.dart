@@ -160,31 +160,25 @@ class cart extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Spacer(
-                    flex: 1,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
-                    child: Text(
+                  Container(
+                    margin: const EdgeInsets.only(left: 12, top: 12),
+                    child: const Text(
                       'Rp200.000,-',
                       textAlign: TextAlign.left,
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
-                  Spacer(
-                    flex: 20,
-                  ),
+                  const Spacer(
+                      // flex: 20,
+                      ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0.0),
                     child: ElevatedButton(
                       onPressed: (
                           //bayar ygy
                           ) {},
                       child: const Text('Check out'),
                     ),
-                  ),
-                  Spacer(
-                    flex: 1,
                   ),
                 ],
               )

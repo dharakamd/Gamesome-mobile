@@ -8,6 +8,15 @@ import 'cart.dart';
 import 'product.dart';
 import 'menuBar.dart';
 import 'menuLogin.dart';
+import 'accessories.dart';
+import 'externalMic.dart';
+import 'gamingChair.dart';
+import 'gamingDesk.dart';
+import 'headset.dart';
+import 'keyboard.dart';
+import 'monitor.dart';
+import 'mouse.dart';
+import 'mousePad.dart';
 
 // void main() {
 //   runApp(const MaterialApp(
@@ -283,7 +292,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const accessories()));
                           },
                           child: Card(
                             child: Container(
@@ -305,7 +314,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const externalMic()));
                           },
                           child: Card(
                             child: Container(
@@ -327,7 +336,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const gamingChair()));
                           },
                           child: Card(
                             child: Container(
@@ -353,7 +362,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const gamingDesk()));
                           },
                           child: Card(
                             child: Container(
@@ -375,7 +384,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const headset()));
                           },
                           child: Card(
                             child: Container(
@@ -397,7 +406,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const keyboard()));
                           },
                           child: Card(
                             child: Container(
@@ -423,7 +432,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const monitor()));
                           },
                           child: Card(
                             child: Container(
@@ -445,7 +454,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const mouse()));
                           },
                           child: Card(
                             child: Container(
@@ -467,7 +476,7 @@ class home extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const shopping()));
+                                    builder: (context) => const mousePad()));
                           },
                           child: Card(
                             child: Container(

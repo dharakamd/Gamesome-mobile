@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 import 'login.dart';
 import 'register.dart';
-import 'shopping.dart';
+import 'wishlist.dart';
 import 'cart.dart';
 import 'product.dart';
 import 'menuBar.dart';
 import 'menuLogin.dart';
 
 void main() {
-  runApp(const wishlist());
+  runApp(const monitor());
 }
 
-class wishlist extends StatelessWidget {
-  const wishlist({super.key});
+class monitor extends StatelessWidget {
+  const monitor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class wishlist extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const menuBar()),
+                    MaterialPageRoute(builder: (context) => const menuLogin()),
                   );
                 },
                 child: const Icon(Icons.dehaze_sharp)),
@@ -43,7 +43,7 @@ class wishlist extends StatelessWidget {
                   child: Row(
                 children: [
                   const Text(
-                    'Wishlist',
+                    'Monitor',
                     style: TextStyle(fontSize: 24),
                   ),
                   Spacer(),
@@ -54,214 +54,6 @@ class wishlist extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => product()));
-                          },
-                          child: Card(
-                            child: Container(
-                                width: 160,
-                                height: 240,
-                                alignment: Alignment.topCenter,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 120,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  'assets/images/testpic.jpg'),
-                                              fit: BoxFit.fitWidth)),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      margin: const EdgeInsets.only(
-                                          left: 12, top: 12),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text('Product Name'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(top: 8),
-                                            child: const Text('Rp. 100.000',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 40),
-                                              child: const Text('Sold 999+')),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => product()));
-                          },
-                          child: Card(
-                            child: Container(
-                                width: 160,
-                                height: 240,
-                                alignment: Alignment.topCenter,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 120,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  'assets/images/testpic.jpg'),
-                                              fit: BoxFit.fitWidth)),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      margin: const EdgeInsets.only(
-                                          left: 12, top: 12),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text('Product Name'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(top: 8),
-                                            child: const Text('Rp. 100.000',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 40),
-                                              child: const Text('Sold 999+')),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => product()));
-                          },
-                          child: Card(
-                            child: Container(
-                                width: 160,
-                                height: 240,
-                                alignment: Alignment.topCenter,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 120,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  'assets/images/testpic.jpg'),
-                                              fit: BoxFit.fitWidth)),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      margin: const EdgeInsets.only(
-                                          left: 12, top: 12),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text('Product Name'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(top: 8),
-                                            child: const Text('Rp. 100.000',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 40),
-                                              child: const Text('Sold 999+')),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => product()));
-                          },
-                          child: Card(
-                            child: Container(
-                                width: 160,
-                                height: 240,
-                                alignment: Alignment.topCenter,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 120,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  'assets/images/testpic.jpg'),
-                                              fit: BoxFit.fitWidth)),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      margin: const EdgeInsets.only(
-                                          left: 12, top: 12),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text('Product Name'),
-                                          Container(
-                                            margin:
-                                                const EdgeInsets.only(top: 8),
-                                            child: const Text('Rp. 100.000',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 40),
-                                              child: const Text('Sold 999+')),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
-                          ),
-                        ),
-                      ],
-                    ),
                     Row(
                       children: [
                         GestureDetector(
